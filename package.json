@@ -1,0 +1,32 @@
+{
+  "name": "@mrklar/music-worlds-toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "files": [
+    "src",
+    "assets/textures",
+    "textures.json",
+    "README.md",
+    "LICENSE.md",
+    "LICENSE-CC0.md"
+  ],
+  "exports": {
+    "./audio": "./src/audio.ts",
+    "./controls": "./src/controls.ts",
+    "./lifecycle": "./src/lifecycle.ts",
+    "./package.json": "./package.json",
+    "./textures.json": "./textures.json"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "jsdom": "30.1.2",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3"
+  }
+}

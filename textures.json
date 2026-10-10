@@ -1,0 +1,167 @@
+[
+  {
+    "asset": "rock_face",
+    "kind": "diff",
+    "source": "https://polyhaven.com/a/rock_face",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_diff_1k.jpg",
+    "file": "assets/textures/rock_face-diff.jpg",
+    "bytes": 732721,
+    "sha256": "cce4b50517161264bdef196f5e247e328ca3739083cd6044ad3cc54d88cb82e2",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "rock_face",
+    "kind": "normal",
+    "source": "https://polyhaven.com/a/rock_face",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_nor_gl_1k.jpg",
+    "file": "assets/textures/rock_face-normal.jpg",
+    "bytes": 1139857,
+    "sha256": "e2682e1286c8b6aca7e01ba7b8fe1726cb6606042b9ee70d097aa67470d410ef",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "rock_face",
+    "kind": "rough",
+    "source": "https://polyhaven.com/a/rock_face",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_rough_1k.jpg",
+    "file": "assets/textures/rock_face-rough.jpg",
+    "bytes": 224371,
+    "sha256": "70ddfc5d7f292909d18ad56dbb1ff7c3a65809dc031854356c7a6978cb446219",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "sparse_grass",
+    "kind": "diff",
+    "source": "https://polyhaven.com/a/sparse_grass",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_diff_1k.jpg",
+    "file": "assets/textures/sparse_grass-diff.jpg",
+    "bytes": 955945,
+    "sha256": "ae94f2b34597b9108eefd88217f55eccaec6d6b382e858a478ee92df90e66617",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "sparse_grass",
+    "kind": "normal",
+    "source": "https://polyhaven.com/a/sparse_grass",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_nor_gl_1k.jpg",
+    "file": "assets/textures/sparse_grass-normal.jpg",
+    "bytes": 1440314,
+    "sha256": "1c840a24807346ddaaf94a5057aee4078fcec3a4cd84bfe45da7d3b480ef460b",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "sparse_grass",
+    "kind": "rough",
+    "source": "https://polyhaven.com/a/sparse_grass",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_rough_1k.jpg",
+    "file": "assets/textures/sparse_grass-rough.jpg",
+    "bytes": 463340,
+    "sha256": "9ebe6d03a9551c17d1802835c92c1442acb8f5d38d4874ee8c37770f11c4bed1",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "wood_planks_grey",
+    "kind": "diff",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_diff_1k.jpg",
+    "file": "assets/textures/wood_planks_grey-diff.jpg",
+    "bytes": 228279,
+    "sha256": "d758be23e8fe7bfbd73bc4ab257cfd59406e1835f6557c12a67cd4fdb15de0d8",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "wood_planks_grey",
+    "kind": "normal",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_nor_gl_1k.jpg",
+    "file": "assets/textures/wood_planks_grey-normal.jpg",
+    "bytes": 157419,
+    "sha256": "5e570e57d688b016b217b9e8e0592f9a8b3364406e22bf6cd775da990452bdb6",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "wood_planks_grey",
+    "kind": "rough",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_rough_1k.jpg",
+    "file": "assets/textures/wood_planks_grey-rough.jpg",
+    "bytes": 186804,
+    "sha256": "ef640502cec94bd2b6500e252891a778a7a721be16b5536d4efc9fe4d99b12aa",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "coast_sand_01",
+    "kind": "diff",
+    "source": "https://polyhaven.com/a/coast_sand_01",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_diff_1k.jpg",
+    "file": "assets/textures/coast_sand_01-diff.jpg",
+    "bytes": 960614,
+    "sha256": "58af2e40100f7f405703a86d593af64379f822c4786850def23ecfc921450d54",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "coast_sand_01",
+    "kind": "normal",
+    "source": "https://polyhaven.com/a/coast_sand_01",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_nor_gl_1k.jpg",
+    "file": "assets/textures/coast_sand_01-normal.jpg",
+    "bytes": 1146826,
+    "sha256": "fe4d045aec99e71e80f682fcf0ad958d2dff1fe614b73178b304d1bac047b54a",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "coast_sand_01",
+    "kind": "rough",
+    "source": "https://polyhaven.com/a/coast_sand_01",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_rough_1k.jpg",
+    "file": "assets/textures/coast_sand_01-rough.jpg",
+    "bytes": 383892,
+    "sha256": "cbc3e0bf2214e04318a643c9dc81f50f33cc5f7b935a20016c5d9efd9a6d1696",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "mossy_rock",
+    "kind": "diff",
+    "source": "https://polyhaven.com/a/mossy_rock",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_diff_1k.jpg",
+    "file": "assets/textures/mossy_rock-diff.jpg",
+    "bytes": 1124438,
+    "sha256": "4dbf37f1b0465c9c8914213163923be159716f5b97fb6946437b6c5e143ef540",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "mossy_rock",
+    "kind": "normal",
+    "source": "https://polyhaven.com/a/mossy_rock",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+    "file": "assets/textures/mossy_rock-normal.jpg",
+    "bytes": 995727,
+    "sha256": "232cdd6a9fdfd01bb8bb1f8f604c53dbca79fa0d3d7995edf85c9945757aa8df",
+    "license": "CC0",
+    "resolution": "1K"
+  },
+  {
+    "asset": "mossy_rock",
+    "kind": "rough",
+    "source": "https://polyhaven.com/a/mossy_rock",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_rough_1k.jpg",
+    "file": "assets/textures/mossy_rock-rough.jpg",
+    "bytes": 780918,
+    "sha256": "0a18bdeb08444b730170b0477f13940ce6cd4d82d06137df661f96d1e2a6a66e",
+    "license": "CC0",
+    "resolution": "1K"
+  }
+]
