@@ -18,6 +18,20 @@ import {createControls} from '@mrklar/music-worlds-toolkit/controls';
 import {installLifecycle} from '@mrklar/music-worlds-toolkit/lifecycle';
 ```
 
+### Contrôles souris et tactiles
+
+Sur ordinateur, le déplacement de la souris au-dessus du canvas actif oriente la vue sans clic. Le premier mouvement établit la position de référence ; les mouvements au-dessus de l’interface ou hors du canvas sont ignorés. Les gestes tactiles et le joystick restent fondés sur le glissement.
+
+Une action explicite du visiteur peut aussi demander le verrouillage du pointeur :
+
+```ts
+const controls = createControls(canvas, {onInteract, onPause});
+controls.setEnabled(true);
+enterButton.addEventListener('click', () => controls.capturePointer());
+```
+
+Si le navigateur refuse le verrouillage, la vue au survol reste disponible. `setEnabled(false)` et `dispose()` restaurent le curseur du canvas.
+
 ## Préparer les textures dans une application
 
 Une étape Node côté consommateur peut copier le dossier publié vers son répertoire statique :
