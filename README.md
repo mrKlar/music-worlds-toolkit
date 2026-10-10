@@ -7,7 +7,7 @@ Ce dépôt ne contient aucun morceau, illustration d’album, texte narratif, r�
 ## Installation à une révision précise
 
 ```sh
-npm install "git+https://github.com/mrKlar/music-worlds-toolkit.git#<REVISION_GIT>"
+npm install "https://codeload.github.com/mrKlar/music-worlds-toolkit/tar.gz/<REVISION_GIT>"
 ```
 
 Le paquet distribue volontairement ses sources TypeScript, sans bundler de bibliothèque. Il est destiné à une application Vite qui consomme directement :
@@ -45,3 +45,5 @@ npm pack --dry-run
 ## Méthode Babylon
 
 Lire [le guide commun](docs/babylon-workflow.md) pour choisir les éditeurs, travailler les matériaux, mesurer le rendu et vérifier les parcours. Les consignes de contribution sont dans [AGENTS.md](AGENTS.md).
+
+Les copies CC0 sont déjà incluses. Pour les actualiser volontairement depuis Poly Haven, le checkout contient `scripts/prepare-textures.py` ; cette commande remplace les cartes et régénère le manifeste. Vérifier les empreintes et le diff avant publication.
