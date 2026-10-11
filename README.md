@@ -20,7 +20,7 @@ import {installLifecycle} from '@mrklar/music-worlds-toolkit/lifecycle';
 
 ### Contrôles souris et tactiles
 
-Sur ordinateur, le déplacement de la souris au-dessus du canvas actif oriente la vue sans clic. Le premier mouvement établit la position de référence ; les mouvements au-dessus de l’interface ou hors du canvas sont ignorés. Les gestes tactiles et le joystick restent fondés sur le glissement.
+Sur ordinateur, le déplacement de la souris au-dessus du canvas actif oriente la vue sans clic. Le premier mouvement établit la position de référence ; les mouvements au-dessus de l’interface ou hors du canvas sont ignorés. Un clic gauche dans la scène demande le verrouillage du pointeur et masque le curseur ; une fois verrouillé, un clic déclenche `onInteract`. Échap libère le pointeur et ouvre la pause par `onPause`. Les gestes tactiles et le joystick restent fondés sur le glissement et ne demandent pas de verrouillage.
 
 Une action explicite du visiteur peut aussi demander le verrouillage du pointeur :
 
@@ -30,7 +30,7 @@ controls.setEnabled(true);
 enterButton.addEventListener('click', () => controls.capturePointer());
 ```
 
-Si le navigateur refuse le verrouillage, la vue au survol reste disponible. `setEnabled(false)` et `dispose()` restaurent le curseur du canvas.
+Si le navigateur refuse le verrouillage, la vue au survol reste disponible. Le curseur est masqué uniquement au-dessus du canvas actif ou pendant son verrouillage. `setEnabled(false)`, la sortie du verrouillage et `dispose()` le restaurent.
 
 ## Préparer les textures dans une application
 

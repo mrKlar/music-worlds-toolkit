@@ -5,7 +5,7 @@ export function createControls(canvas:HTMLCanvasElement,callbacks:{onInteract:()
  const resets:(()=>void)[]=[];
  const keys=new Set<string>(),cleanup:(()=>void)[]=[];
  const on=(target:EventTarget,event:string,fn:EventListener)=>{target.addEventListener(event,fn);cleanup.push(()=>target.removeEventListener(event,fn));};
- const updateCursor=()=>{canvas.style.cursor=enabled&&hovering?'none':initialCursor;};
+ const updateCursor=()=>{canvas.style.cursor=enabled&&(hovering||document.pointerLockElement===canvas)?'none':initialCursor;};
  const clear=()=>{keys.clear();drag=null;hovering=false;stickX=stickY=lookX=lookY=0;updateCursor();resets.forEach(fn=>fn());};
  const startHover=(e:PointerEvent)=>{if(!enabled||e.pointerType!=='mouse'||document.pointerLockElement===canvas)return false;hovering=true;lastX=e.clientX;lastY=e.clientY;updateCursor();return true;};
  const capturePointer=()=>{if(!enabled||navigator.maxTouchPoints>0)return;try{canvas.requestPointerLock?.()?.catch(()=>{});}catch{}};
@@ -15,12 +15,11 @@ export function createControls(canvas:HTMLCanvasElement,callbacks:{onInteract:()
  on(canvas,'pointerenter',((e:PointerEvent)=>{startHover(e);}) as EventListener);
  on(canvas,'pointerleave',((e:PointerEvent)=>{if(e.pointerType!=='mouse'||document.pointerLockElement===canvas)return;hovering=false;updateCursor();}) as EventListener);
  on(canvas,'pointermove',((e:PointerEvent)=>{if(!enabled||e.pointerType!=='mouse'||document.pointerLockElement===canvas||drag!==null)return;if(!hovering){startHover(e);return;}lookX+=e.clientX-lastX;lookY+=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;}) as EventListener);
- on(canvas,'pointerdown',((e:PointerEvent)=>{if(!enabled)return;canvas.focus();if(e.pointerType==='mouse'&&document.pointerLockElement===canvas){callbacks.onInteract();return;}drag=e.pointerId;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture?.(e.pointerId);}) as EventListener);
- on(canvas,'dblclick',capturePointer);
+ on(canvas,'pointerdown',((e:PointerEvent)=>{if(!enabled)return;canvas.focus();if(e.pointerType==='mouse'){if(document.pointerLockElement===canvas){callbacks.onInteract();return;}if(e.button===0){capturePointer();return;}}drag=e.pointerId;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture?.(e.pointerId);}) as EventListener);
  on(window,'pointermove',((e:PointerEvent)=>{if(!enabled)return;if(document.pointerLockElement===canvas){lookX+=e.movementX;lookY+=e.movementY;}else if(drag===e.pointerId){lookX+=e.clientX-lastX;lookY+=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;}}) as EventListener);
  on(window,'pointerup',((e:PointerEvent)=>{if(drag===e.pointerId)drag=null;}) as EventListener);
  on(window,'pointercancel',clear);
- on(document,'pointerlockchange',()=>{const locked=document.pointerLockElement===canvas;if(wasLocked&&!locked){clear();callbacks.onPause();}wasLocked=locked;});
+ on(document,'pointerlockchange',()=>{const locked=document.pointerLockElement===canvas;if(wasLocked&&!locked){clear();callbacks.onPause();}else updateCursor();wasLocked=locked;});
  return {
   readMovement():Movement {if(!enabled)return {forward:0,right:0,lookX:0,lookY:0};const v={forward:(keys.has('KeyW')||keys.has('KeyZ')||keys.has('ArrowUp')?1:0)-(keys.has('KeyS')||keys.has('ArrowDown')?1:0)-stickY,right:(keys.has('KeyD')||keys.has('ArrowRight')?1:0)-(keys.has('KeyA')||keys.has('KeyQ')||keys.has('ArrowLeft')?1:0)+stickX,lookX,lookY};lookX=lookY=0;return v;},
   setEnabled(value:boolean){enabled=value;clear();},
